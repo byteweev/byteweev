@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showcases — BYTEWEEV</title>
+  <meta name="description" content="Explore custom websites, web applications, and digital platforms engineered by ByteWeev studio.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-black text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+      
+      <!-- Logo Mark -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-105">
+          <svg class="w-full h-full text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="nav-logo-mask-showcase">
+                <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" mask="url(#nav-logo-mask-showcase)" />
+            </g>
+          </svg>
+        </div>
+        <span class="font-display font-bold text-lg tracking-wider text-white uppercase">BYTEWEEV</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="showcase.html" class="nav-link active">Showcase</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Connect</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="hidden sm:inline-flex btn-primary text-xs py-2.5 px-5">
+          Start Project
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 text-white" aria-label="Toggle navigation menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden px-6 py-4 border-t border-[#222227] bg-[#0c0c0f]">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="showcase.html" class="nav-link active">Showcase</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Connect</a>
+        <a href="contact.html" class="btn-primary text-center text-xs py-3 mt-2">Start Project</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SHOWCASE MAIN CONTENT
+       ========================================================================== -->
+  <main class="max-w-7xl mx-auto px-6 sm:px-10 pt-16 pb-24">
+    
+    <!-- Hero / Header -->
+    <div class="mb-14">
+      <div class="status-pill mb-4">
+        <span class="status-dot"></span>
+        <span>STUDIO SHOWCASE</span>
+      </div>
+      <h1 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white mb-6">
+        PROJECT SHOWCASES
+      </h1>
+      <p class="text-base sm:text-lg text-zinc-400 max-w-2xl leading-relaxed">
+        A selection of custom websites, web applications, and digital platforms engineered by ByteWeev studio. All codebases are production-tested and built for scale.
+      </p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="flex flex-wrap items-center gap-3 mb-12 pb-6 border-b border-[#222227]">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="games">Game Development</button>
+      <button class="filter-btn" data-filter="tools">3D &amp; Blender Tools</button>
+      <button class="filter-btn" data-filter="web">Web Platforms &amp; Apps</button>
+    </div>
+
+    <!-- Showcase Grid (Populated dynamically from data.js) -->
+    <div id="showcase-list-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+      <!-- Rendered by app.js from data.js -->
+    </div>
+
+    <!-- Bottom CTA Banner -->
+    <div class="byte-card p-10 sm:p-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+      <div>
+        <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">[ COLLABORATION ]</span>
+        <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mb-2">Have a project in mind?</h3>
+        <p class="text-sm text-zinc-400">We architect, code, and deploy custom software and interactive games.</p>
+      </div>
+      <a href="contact.html" class="btn-primary text-xs whitespace-nowrap">
+        <span>Request Technical Scoping</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 mono text-xs">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 flex items-center justify-center">
+          <svg class="w-full h-full text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="footer-logo-mask-showcase">
+                <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" mask="url(#footer-logo-mask-showcase)" />
+            </g>
+          </svg>
+        </div>
+        <span class="font-bold text-white">BYTEWEEV &copy; 2026</span>
+        <span class="text-zinc-500">• STUDIO</span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 font-semibold">
+        <a href="index.html" class="text-zinc-400 hover:text-white transition-colors">HOME</a>
+        <a href="showcase.html" class="text-zinc-400 hover:text-white transition-colors">SHOWCASE</a>
+        <a href="about.html" class="text-zinc-400 hover:text-white transition-colors">ABOUT</a>
+        <a href="contact.html" class="text-zinc-400 hover:text-white transition-colors">CONNECT</a>
+        <a href="mailto:hello@byteweev.com" class="text-zinc-400 hover:text-white transition-colors">HELLO@BYTEWEEV.COM</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect — BYTEWEEV</title>
+  <meta name="description" content="Start a project inquiry or get in touch with ByteWeev software engineering studio.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-black text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+      
+      <!-- Logo Mark -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-105">
+          <svg class="w-full h-full text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="nav-logo-mask-contact">
+                <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" mask="url(#nav-logo-mask-contact)" />
+            </g>
+          </svg>
+        </div>
+        <span class="font-display font-bold text-lg tracking-wider text-white uppercase">BYTEWEEV</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Connect</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <a href="mailto:hello@byteweev.com" class="hidden sm:inline-flex btn-primary text-xs py-2.5 px-5">
+          Email Direct
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 text-white" aria-label="Toggle navigation menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden px-6 py-4 border-t border-[#222227] bg-[#0c0c0f]">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Connect</a>
+        <a href="mailto:hello@byteweev.com" class="btn-primary text-center text-xs py-3 mt-2">Email Direct</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       CONNECT MAIN CONTENT
+       ========================================================================== -->
+  <main class="max-w-7xl mx-auto px-6 sm:px-10 pt-16 pb-24">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-start mb-24">
+      
+      <!-- Left Column: Studio Channels -->
+      <div class="lg:col-span-5">
+        <div class="status-pill mb-4">
+          <span class="status-dot"></span>
+          <span>START A PROJECT</span>
+        </div>
+        <h1 class="font-display font-black text-4xl sm:text-6xl uppercase tracking-tight text-white leading-none mb-6">
+          LET'S BUILD<br>TOGETHER.
+        </h1>
+        <p class="text-base text-zinc-400 leading-relaxed mb-8">
+          Tell us about what you want to build. Whether it's a 3D game, a custom developer tool, or a web platform, our team is ready to scope your project.
+        </p>
+
+        <div class="space-y-6 mono text-sm mb-10 pb-8 border-b border-[#222227]">
+          <div>
+            <span class="text-xs uppercase text-zinc-500 block mb-1">DIRECT INBOX</span>
+            <a href="mailto:hello@byteweev.com" class="font-bold text-base text-white hover:opacity-75 transition-opacity underline underline-offset-4">
+              hello@byteweev.com
+            </a>
+          </div>
+
+          <div>
+            <span class="text-xs uppercase text-zinc-500 block mb-1">LOCATION &amp; CADENCE</span>
+            <span class="font-medium text-white">Remote-first studio • Operating globally</span>
+          </div>
+
+          <div>
+            <span class="text-xs uppercase text-zinc-500 block mb-1">CURRENT STATUS</span>
+            <span class="font-semibold text-emerald-400">Accepting Q4 / Q1 client builds</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="mono text-xs uppercase text-zinc-500 block mb-3">STUDIO PROFILES</span>
+          <div class="flex items-center gap-4 mono text-xs font-bold">
+            <a href="https://github.com/byteweev" target="_blank" rel="noopener" class="text-white hover:opacity-70 transition-opacity">GITHUB &rarr;</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-white hover:opacity-70 transition-opacity">LINKEDIN &rarr;</a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="text-white hover:opacity-70 transition-opacity">X &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Inquiry Form -->
+      <div class="lg:col-span-7">
+        <div class="byte-card p-8 sm:p-12">
+          
+          <div class="mb-8">
+            <span class="mono text-xs font-bold uppercase text-zinc-500 block mb-1">[ PROJECT INQUIRY ]</span>
+            <h2 class="font-display font-bold text-2xl text-white">Share Your Technical Scope</h2>
+          </div>
+
+          <form id="contact-inquiry-form" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-name" class="mono text-xs font-bold uppercase text-white block mb-2">
+                  Your Name *
+                </label>
+                <input type="text" id="contact-name" required placeholder="Alex Turner" class="form-input">
+              </div>
+
+              <div>
+                <label for="contact-email" class="mono text-xs font-bold uppercase text-white block mb-2">
+                  Work Email *
+                </label>
+                <input type="email" id="contact-email" required placeholder="alex@company.com" class="form-input">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-service" class="mono text-xs font-bold uppercase text-white block mb-2">
+                  Service Area
+                </label>
+                <select id="contact-service" class="form-select">
+                  <option value="games">Game Development (Godot / Unity / 3D)</option>
+                  <option value="tools">3D &amp; Blender Tools / Addons</option>
+                  <option value="web">Web Platform &amp; Apps</option>
+                  <option value="custom">Custom Systems Architecture</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="contact-timeline" class="mono text-xs font-bold uppercase text-white block mb-2">
+                  Target Timeline
+                </label>
+                <select id="contact-timeline" class="form-select">
+                  <option value="asap">Immediate (Within 2-4 weeks)</option>
+                  <option value="1-3-months">1 to 3 Months</option>
+                  <option value="quarterly">Quarterly Sprint Roadmap</option>
+                  <option value="exploratory">Exploratory / Initial Scoping</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-brief" class="mono text-xs font-bold uppercase text-white block mb-2">
+                Project Overview &amp; Requirements *
+              </label>
+              <textarea id="contact-brief" rows="5" required placeholder="Tell us about what you want to build, key mechanics or technical challenges..." class="form-textarea"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full py-4 text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+              <span>Send Project Inquiry</span>
+              <span>&rarr;</span>
+            </button>
+
+            <div id="contact-form-feedback"></div>
+
+            <div class="pt-4 border-t border-[#222227] flex items-center justify-between mono text-[11px] text-zinc-500">
+              <span>🔒 Confidential • Direct Engineer Reply</span>
+              <span>⚡ 24-hour response SLA</span>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ Accordion on Contact Page -->
+    <div class="max-w-4xl mx-auto border-t border-[#222227] pt-20">
+      <div class="mb-12 text-center">
+        <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">[ FAQ ]</span>
+        <h2 class="font-display font-black text-3xl sm:text-4xl uppercase tracking-tight text-white">
+          COMMON QUESTIONS
+        </h2>
+      </div>
+
+      <div id="faq-accordion-container" class="space-y-4">
+        <!-- Rendered by app.js from data.js -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 mono text-xs">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 flex items-center justify-center">
+          <svg class="w-full h-full text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="footer-logo-mask-contact">
+                <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" mask="url(#footer-logo-mask-contact)" />
+            </g>
+          </svg>
+        </div>
+        <span class="font-bold text-white">BYTEWEEV &copy; 2026</span>
+        <span class="text-zinc-500">• STUDIO</span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 font-semibold">
+        <a href="index.html" class="text-zinc-400 hover:text-white transition-colors">HOME</a>
+        <a href="showcase.html" class="text-zinc-400 hover:text-white transition-colors">SHOWCASE</a>
+        <a href="about.html" class="text-zinc-400 hover:text-white transition-colors">ABOUT</a>
+        <a href="contact.html" class="text-zinc-400 hover:text-white transition-colors">CONNECT</a>
+        <a href="mailto:hello@byteweev.com" class="text-zinc-400 hover:text-white transition-colors">HELLO@BYTEWEEV.COM</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

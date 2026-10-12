@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%" fill="none">
+  <!-- Background -->
+  <rect width="800" height="480" rx="16" fill="#09090b" />
+  <rect x="0.5" y="0.5" width="799" height="479" rx="15.5" stroke="#27272a" />
+
+  <!-- Subtle Coordinate Grid -->
+  <defs>
+    <pattern id="veritas-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#18181b" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="800" height="480" rx="16" fill="url(#veritas-grid)" opacity="0.8" />
+
+  <!-- Window Header -->
+  <rect x="20" y="20" width="760" height="44" rx="8" fill="#121215" stroke="#27272a" />
+  <circle cx="44" cy="42" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="60" cy="42" r="5" fill="#eab308" opacity="0.8" />
+  <circle cx="76" cy="42" r="5" fill="#10b981" opacity="0.8" />
+  <text x="100" y="46" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#a1a1aa">VERITAS LEDGER // DOUBLE-ENTRY CRYPTOGRAPHIC CORE</text>
+  <rect x="655" y="32" width="105" height="20" rx="10" fill="#10b981" fill-opacity="0.15" />
+  <text x="668" y="46" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#10b981">LATENCY &lt; 12MS</text>
+
+  <!-- Top Metrics Bar -->
+  <rect x="20" y="74" width="240" height="84" rx="8" fill="#121215" stroke="#27272a" />
+  <text x="36" y="98" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#71717a">RECONCILED VOLUME</text>
+  <text x="36" y="132" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="800" fill="#fafafa">$148,920,400</text>
+
+  <rect x="272" y="74" width="246" height="84" rx="8" fill="#121215" stroke="#27272a" />
+  <text x="288" y="98" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#71717a">AUDIT INTEGRITY PROOF</text>
+  <text x="288" y="132" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#10b981">SHA-256 VALIDATED</text>
+
+  <rect x="530" y="74" width="250" height="84" rx="8" fill="#121215" stroke="#27272a" />
+  <text x="546" y="98" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#71717a">SETTLEMENT ENGINE</text>
+  <text x="546" y="132" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="800" fill="#fafafa">11.8 ms AVG</text>
+
+  <!-- Ledger Transaction Stream Table -->
+  <rect x="20" y="170" width="760" height="290" rx="8" fill="#121215" stroke="#27272a" />
+  
+  <!-- Table Header -->
+  <rect x="20" y="170" width="760" height="40" rx="8" fill="#18181b" />
+  <text x="40" y="195" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#71717a">TX_ID</text>
+  <text x="180" y="195" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#71717a">LEDGER ACCOUNT</text>
+  <text x="380" y="195" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#71717a">DEBIT / CREDIT</text>
+  <text x="540" y="195" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#71717a">BLOCK HASH</text>
+  <text x="700" y="195" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#71717a">STATE</text>
+
+  <!-- Row 1 -->
+  <line x1="20" y1="210" x2="780" y2="210" stroke="#27272a" stroke-width="0.8" />
+  <text x="40" y="238" font-family="'JetBrains Mono', monospace" font-size="12" fill="#fafafa">tx_984f1a2e</text>
+  <text x="180" y="238" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#d4d4d8">Treasury Settlement</text>
+  <text x="380" y="238" font-family="'JetBrains Mono', monospace" font-size="12" fill="#10b981">+ $4,250,000.00</text>
+  <text x="540" y="238" font-family="'JetBrains Mono', monospace" font-size="11" fill="#71717a">0x9a83...42f0</text>
+  <text x="700" y="238" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">FINAL</text>
+
+  <!-- Row 2 -->
+  <line x1="20" y1="260" x2="780" y2="260" stroke="#27272a" stroke-width="0.8" />
+  <text x="40" y="288" font-family="'JetBrains Mono', monospace" font-size="12" fill="#fafafa">tx_812b7c4d</text>
+  <text x="180" y="288" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#d4d4d8">Liquidity Pool Reserve</text>
+  <text x="380" y="288" font-family="'JetBrains Mono', monospace" font-size="12" fill="#ef4444">- $1,800,000.00</text>
+  <text x="540" y="288" font-family="'JetBrains Mono', monospace" font-size="11" fill="#71717a">0x3b12...ec91</text>
+  <text x="700" y="288" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">FINAL</text>
+
+  <!-- Row 3 -->
+  <line x1="20" y1="310" x2="780" y2="310" stroke="#27272a" stroke-width="0.8" />
+  <text x="40" y="338" font-family="'JetBrains Mono', monospace" font-size="12" fill="#fafafa">tx_645a901f</text>
+  <text x="180" y="338" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#d4d4d8">Cross-Border FX Gateway</text>
+  <text x="380" y="338" font-family="'JetBrains Mono', monospace" font-size="12" fill="#10b981">+ €920,400.00</text>
+  <text x="540" y="338" font-family="'JetBrains Mono', monospace" font-size="11" fill="#71717a">0x7c49...b82a</text>
+  <text x="700" y="338" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">FINAL</text>
+
+  <!-- Row 4 -->
+  <line x1="20" y1="360" x2="780" y2="360" stroke="#27272a" stroke-width="0.8" />
+  <text x="40" y="388" font-family="'JetBrains Mono', monospace" font-size="12" fill="#fafafa">tx_330d22e8</text>
+  <text x="180" y="388" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#d4d4d8">Direct Merchant Clearing</text>
+  <text x="380" y="388" font-family="'JetBrains Mono', monospace" font-size="12" fill="#10b981">+ $640,120.00</text>
+  <text x="540" y="388" font-family="'JetBrains Mono', monospace" font-size="11" fill="#71717a">0x11ff...504d</text>
+  <text x="700" y="388" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">FINAL</text>
+
+  <!-- Row 5 -->
+  <line x1="20" y1="410" x2="780" y2="410" stroke="#27272a" stroke-width="0.8" />
+  <text x="40" y="438" font-family="'JetBrains Mono', monospace" font-size="12" fill="#fafafa">tx_102f99ac</text>
+  <text x="180" y="438" font-family="'Space Grotesk', sans-serif" font-size="12" fill="#d4d4d8">Escrow Release #94</text>
+  <text x="380" y="438" font-family="'JetBrains Mono', monospace" font-size="12" fill="#ef4444">- $320,000.00</text>
+  <text x="540" y="438" font-family="'JetBrains Mono', monospace" font-size="11" fill="#71717a">0x44aa...8810</text>
+  <text x="700" y="438" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#10b981">FINAL</text>
+</svg>

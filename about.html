@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — BYTEWEEV</title>
+  <meta name="description" content="Learn about ByteWeev software engineering studio, our engineering principles, client collaboration model, and tech stack.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-black text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+      
+      <!-- Logo Mark -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-105">
+          <svg class="w-full h-full text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="nav-logo-mask-about">
+                <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" mask="url(#nav-logo-mask-about)" />
+            </g>
+          </svg>
+        </div>
+        <span class="font-display font-bold text-lg tracking-wider text-white uppercase">BYTEWEEV</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Connect</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="hidden sm:inline-flex btn-primary text-xs py-2.5 px-5">
+          Start Project
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 text-white" aria-label="Toggle navigation menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden px-6 py-4 border-t border-[#222227] bg-[#0c0c0f]">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Connect</a>
+        <a href="contact.html" class="btn-primary text-center text-xs py-3 mt-2">Start Project</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       ABOUT MAIN CONTENT
+       ========================================================================== -->
+  <main class="max-w-7xl mx-auto px-6 sm:px-10 pt-16 pb-24">
+    
+    <!-- Hero / Header -->
+    <div class="max-w-4xl mb-16">
+      <div class="status-pill mb-4">
+        <span class="status-dot"></span>
+        <span>STUDIO MANIFESTO</span>
+      </div>
+      <h1 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight text-white leading-tight mb-8">
+        LESS FLUFF.<br>PURE CRAFT.
+      </h1>
+      <p class="text-lg sm:text-xl font-medium text-white leading-relaxed mb-6">
+        ByteWeev is an independent software and game engineering studio. We build custom software, games, and tools for teams that value speed, precision, and architectural longevity.
+      </p>
+      <div class="space-y-4 text-base text-zinc-400 leading-relaxed">
+        <p>
+          We founded ByteWeev after witnessing how traditional digital agencies operate: non-technical account managers making empty promises, bloated retainers, and client code quietly outsourced to untrained junior subcontractors.
+        </p>
+        <p>
+          At ByteWeev, you collaborate directly with the senior engineers writing your code and designing your systems. No telephone game. No bureaucratic bloat. Every system, game, and tool we build is designed for production reliability, easy maintenance, and long-term business value.
+        </p>
+      </div>
+    </div>
+
+    <!-- Studio Benchmark Stats Grid -->
+    <div id="about-stats-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+      <!-- Populated by app.js from data.js -->
+    </div>
+
+    <!-- Engineering Principles Section -->
+    <div class="mb-24">
+      <div class="mb-12">
+        <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">[ CORE VALUES ]</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white">
+          HOW WE OPERATE
+        </h2>
+      </div>
+
+      <div id="about-principles-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Populated by app.js from data.js -->
+      </div>
+    </div>
+
+    <!-- Tech Stack Radar -->
+    <div class="mb-24">
+      <div class="mb-12">
+        <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">[ OUR TOOLBOX ]</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white">
+          TECHNOLOGY STACK
+        </h2>
+        <p class="text-sm text-zinc-400 max-w-xl mt-2">
+          We use battle-tested, modern technologies known for reliability, performance, and developer ergonomics.
+        </p>
+      </div>
+
+      <div id="about-tech-radar" class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Populated by app.js from data.js -->
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mb-24">
+      <div class="mb-12">
+        <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">[ QUESTIONS &amp; ANSWERS ]</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white">
+          FREQUENTLY ASKED
+        </h2>
+      </div>
+
+      <div id="faq-accordion-container" class="space-y-4 max-w-4xl">
+        <!-- Populated by app.js from data.js -->
+      </div>
+    </div>
+
+    <!-- Bottom CTA Banner -->
+    <div class="byte-card p-10 sm:p-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+      <div>
+        <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">[ COLLABORATION ]</span>
+        <h3 class="font-display font-bold text-2xl sm:text-3xl text-white mb-2">Want to partner with our team?</h3>
+        <p class="text-sm text-zinc-400">We typically onboard 1 to 2 new client systems per sprint quarter.</p>
+      </div>
+      <a href="contact.html" class="btn-primary text-xs whitespace-nowrap">
+        <span>Connect With Us</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 mono text-xs">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 flex items-center justify-center">
+          <svg class="w-full h-full text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="footer-logo-mask-about">
+                <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" mask="url(#footer-logo-mask-about)" />
+            </g>
+          </svg>
+        </div>
+        <span class="font-bold text-white">BYTEWEEV &copy; 2026</span>
+        <span class="text-zinc-500">• STUDIO</span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 font-semibold">
+        <a href="index.html" class="text-zinc-400 hover:text-white transition-colors">HOME</a>
+        <a href="showcase.html" class="text-zinc-400 hover:text-white transition-colors">SHOWCASE</a>
+        <a href="about.html" class="text-zinc-400 hover:text-white transition-colors">ABOUT</a>
+        <a href="contact.html" class="text-zinc-400 hover:text-white transition-colors">CONNECT</a>
+        <a href="mailto:hello@byteweev.com" class="text-zinc-400 hover:text-white transition-colors">HELLO@BYTEWEEV.COM</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

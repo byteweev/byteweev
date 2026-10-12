@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BYTEWEEV — Websites &amp; Web Applications Studio</title>
+  <meta name="description" content="Independent digital studio engineering custom websites, scalable web platforms, and modern web applications.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-black text-white">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+      
+      <!-- Logo Mark -->
+      <a href="index.html" class="flex items-center gap-3.5 group">
+        <div class="w-8 h-8 flex items-center justify-center transition-transform group-hover:scale-105">
+          <svg class="w-full h-full text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="nav-logo-mask">
+                <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" mask="url(#nav-logo-mask)" />
+            </g>
+          </svg>
+        </div>
+        <span class="font-display font-bold text-lg tracking-wider text-white uppercase">BYTEWEEV</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Connect</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <a href="contact.html" class="hidden sm:inline-flex btn-primary text-xs py-2.5 px-5">
+          Start Project
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 text-white" aria-label="Toggle navigation menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden px-6 py-4 border-t border-[#222227] bg-[#0c0c0f]">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Connect</a>
+        <a href="contact.html" class="btn-primary text-center text-xs py-3 mt-2">Start Project</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION — Minimalist, Geometric, High Impact
+       ========================================================================== -->
+  <main>
+    <section class="relative pt-20 pb-20 sm:pt-28 sm:pb-24 px-6 sm:px-10 max-w-7xl mx-auto flex flex-col items-center text-center">
+      
+      <!-- Top Status Indicator -->
+      <div class="mb-8">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>AVAILABLE FOR NEW PROJECTS</span>
+          <span class="text-zinc-600">|</span>
+          <span class="text-zinc-400">WEBSITES &amp; WEB APPS</span>
+        </div>
+      </div>
+
+      <!-- Main Headline (Swiss Modernist Typography) -->
+      <h1 class="font-display font-black text-5xl sm:text-7xl lg:text-8xl tracking-tight text-white leading-[1.05] max-w-4xl mb-8">
+        WEBSITES &amp; APPS<br>ENGINEERED FOR SCALE.
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed mb-12">
+        ByteWeev is an independent digital studio. We engineer custom websites, scalable web platforms, and bespoke web applications for teams that value speed, precision, and architectural craft.
+      </p>
+
+      <!-- Centerpiece: Interactive Geometric ByteWeev Logo Emblem -->
+      <div class="mb-12">
+        <div class="logo-emblem-container">
+          <svg class="logo-geometric-shape text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="hero-logo-mask">
+                <rect x="0" y="0" width="200" height="200" rx="8" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="8" fill="#ffffff" mask="url(#hero-logo-mask)" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <a href="#gallery" class="btn-primary w-full sm:w-auto">
+          <span>Explore Works &amp; Gallery</span>
+          <span>&darr;</span>
+        </a>
+        <a href="showcase.html" class="btn-secondary w-full sm:w-auto">
+          <span>All Showcases &rarr;</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         3D CURVED SCROLLABLE GALLERY SECTION (Panoramic Arc Layout)
+         ======================================================================== -->
+    <section id="gallery" class="py-20 border-t border-[#222227] overflow-hidden">
+      
+      <!-- Gallery Header & Controls -->
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+        <div>
+          <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-2">[ 01 // SELECTED WORK ]</span>
+          <h2 class="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white">
+            WEBSITES &amp; APPLICATIONS
+          </h2>
+        </div>
+        
+        <!-- Controls: Status Pill & Arrow Buttons -->
+        <div class="flex items-center gap-3">
+          <div class="status-pill text-xs">
+            <span class="status-dot"></span>
+            <span>SCROLL OR DRAG TO EXPLORE</span>
+          </div>
+          <button id="gallery-prev-btn" class="w-10 h-10 rounded-full border border-[#222227] bg-[#0c0c0f] hover:border-white text-white flex items-center justify-center transition-colors text-base" aria-label="Previous slide">
+            &larr;
+          </button>
+          <button id="gallery-next-btn" class="w-10 h-10 rounded-full border border-[#222227] bg-[#0c0c0f] hover:border-white text-white flex items-center justify-center transition-colors text-base" aria-label="Next slide">
+            &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- 3D Cylindrical Arc Track Container -->
+      <div class="curved-gallery-wrapper">
+        <div id="curved-gallery-viewport" class="curved-gallery-viewport">
+          <div id="curved-gallery-track" class="curved-gallery-track">
+            <!-- Dynamically populated from gallery_data.js -->
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         STUDIO PHILOSOPHY & STATS
+         ======================================================================== -->
+    <section class="py-24 px-6 sm:px-10 max-w-7xl mx-auto border-t border-[#222227]">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6">
+          <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-3">[ 02 // APPROACH ]</span>
+          <h2 class="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-tight mb-6">
+            NO MIDDLEMEN.<br>PURE CODE CRAFT.
+          </h2>
+          <p class="text-base text-zinc-400 leading-relaxed mb-6">
+            Traditional agencies burden projects with non-technical account managers, hidden junior subcontractors, and bloated retainers.
+          </p>
+          <p class="text-base text-zinc-400 leading-relaxed mb-8">
+            At ByteWeev, you collaborate directly with the senior engineers writing your code and designing your systems. Clean architecture, 14-day sprints, and 100% intellectual property ownership from day one.
+          </p>
+          <a href="about.html" class="btn-secondary">
+            <span>Read Our Engineering Ethos</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="lg:col-span-6 space-y-4">
+          <!-- Stats Grid (Populated from data.js) -->
+          <div id="home-stats-grid" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+            <!-- Rendered dynamically by app.js from data.js -->
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================================
+         CALL TO ACTION / CONNECT
+         ======================================================================== -->
+    <section class="py-24 px-6 sm:px-10 max-w-7xl mx-auto border-t border-[#222227]">
+      
+      <div class="byte-card p-10 sm:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div class="max-w-xl">
+          <span class="mono text-xs font-bold uppercase tracking-wider text-zinc-500 block mb-3">[ 03 // READY TO BUILD? ]</span>
+          <h2 class="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white mb-4">
+            LET'S ENGINEER YOUR NEXT PRODUCT.
+          </h2>
+          <p class="text-sm sm:text-base text-zinc-400 leading-relaxed">
+            Have a website, web platform, or custom application to engineer? Tell us about your technical brief.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+          <a href="contact.html" class="btn-primary w-full sm:w-auto text-center">
+            <span>Start a Project</span>
+            <span>&rarr;</span>
+          </a>
+          <a href="mailto:hello@byteweev.com" class="btn-secondary w-full sm:w-auto text-center">
+            <span>Email Direct</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 py-12 flex flex-col sm:flex-row items-center justify-between gap-6 mono text-xs">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 flex items-center justify-center">
+          <svg class="w-full h-full text-white" viewBox="0 0 400 400" fill="none">
+            <g transform="translate(200, 200) rotate(-35) translate(-100, -100)">
+              <mask id="footer-logo-mask">
+                <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" />
+                <circle cx="20" cy="200" r="50" fill="#000000" />
+                <circle cx="2" cy="150" r="32" fill="#000000" />
+                <circle cx="120" cy="140" r="18" fill="#000000" />
+                <circle cx="170" cy="140" r="18" fill="#000000" />
+              </mask>
+              <rect x="0" y="0" width="200" height="200" rx="6" fill="#ffffff" mask="url(#footer-logo-mask)" />
+            </g>
+          </svg>
+        </div>
+        <span class="font-bold text-white">BYTEWEEV &copy; 2026</span>
+        <span class="text-zinc-500">• STUDIO</span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 font-semibold">
+        <a href="index.html" class="text-zinc-400 hover:text-white transition-colors">HOME</a>
+        <a href="showcase.html" class="text-zinc-400 hover:text-white transition-colors">SHOWCASE</a>
+        <a href="about.html" class="text-zinc-400 hover:text-white transition-colors">ABOUT</a>
+        <a href="contact.html" class="text-zinc-400 hover:text-white transition-colors">CONNECT</a>
+        <a href="mailto:hello@byteweev.com" class="text-zinc-400 hover:text-white transition-colors">HELLO@BYTEWEEV.COM</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/gallery_data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
