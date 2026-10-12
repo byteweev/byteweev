@@ -53,7 +53,7 @@
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-4">
-        <a href="mailto:hello@byteweev.com" class="hidden sm:inline-flex btn-primary text-xs py-2.5 px-5">
+        <a href="mailto:byteweev@gmail.com" class="hidden sm:inline-flex btn-primary text-xs py-2.5 px-5">
           Email Direct
         </a>
 
@@ -74,7 +74,7 @@
         <a href="showcase.html" class="nav-link">Showcase</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link active">Connect</a>
-        <a href="mailto:hello@byteweev.com" class="btn-primary text-center text-xs py-3 mt-2">Email Direct</a>
+        <a href="mailto:byteweev@gmail.com" class="btn-primary text-center text-xs py-3 mt-2">Email Direct</a>
       </div>
     </div>
   </header>
@@ -102,8 +102,8 @@
         <div class="space-y-6 mono text-sm mb-10 pb-8 border-b border-[#222227]">
           <div>
             <span class="text-xs uppercase text-zinc-500 block mb-1">DIRECT INBOX</span>
-            <a href="mailto:hello@byteweev.com" class="font-bold text-base text-white hover:opacity-75 transition-opacity underline underline-offset-4">
-              hello@byteweev.com
+            <a href="mailto:byteweev@gmail.com" class="font-bold text-base text-white hover:opacity-75 transition-opacity underline underline-offset-4">
+              byteweev@gmail.com
             </a>
           </div>
 
@@ -112,20 +112,9 @@
             <span class="font-medium text-white">Remote-first studio • Operating globally</span>
           </div>
 
-          <div>
-            <span class="text-xs uppercase text-zinc-500 block mb-1">CURRENT STATUS</span>
-            <span class="font-semibold text-emerald-400">Accepting Q4 / Q1 client builds</span>
-          </div>
+          
         </div>
 
-        <div>
-          <span class="mono text-xs uppercase text-zinc-500 block mb-3">STUDIO PROFILES</span>
-          <div class="flex items-center gap-4 mono text-xs font-bold">
-            <a href="https://github.com/byteweev" target="_blank" rel="noopener" class="text-white hover:opacity-70 transition-opacity">GITHUB &rarr;</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-white hover:opacity-70 transition-opacity">LINKEDIN &rarr;</a>
-            <a href="https://x.com" target="_blank" rel="noopener" class="text-white hover:opacity-70 transition-opacity">X &rarr;</a>
-          </div>
-        </div>
       </div>
 
       <!-- Right Column: Interactive Inquiry Form -->
@@ -137,21 +126,21 @@
             <h2 class="font-display font-bold text-2xl text-white">Share Your Technical Scope</h2>
           </div>
 
-          <form id="contact-inquiry-form" class="space-y-6">
+          <form id="contact-inquiry-form" action="https://formspree.io/f/mnpjbgov" method="POST" class="space-y-6">
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label for="contact-name" class="mono text-xs font-bold uppercase text-white block mb-2">
                   Your Name *
                 </label>
-                <input type="text" id="contact-name" required placeholder="Alex Turner" class="form-input">
+                <input type="text" id="contact-name" name="name" required placeholder="Alex Turner" class="form-input">
               </div>
 
               <div>
                 <label for="contact-email" class="mono text-xs font-bold uppercase text-white block mb-2">
                   Work Email *
                 </label>
-                <input type="email" id="contact-email" required placeholder="alex@company.com" class="form-input">
+                <input type="email" id="contact-email" name="email" required placeholder="alex@company.com" class="form-input">
               </div>
             </div>
 
@@ -160,11 +149,11 @@
                 <label for="contact-service" class="mono text-xs font-bold uppercase text-white block mb-2">
                   Service Area
                 </label>
-                <select id="contact-service" class="form-select">
-                  <option value="games">Game Development (Godot / Unity / 3D)</option>
-                  <option value="tools">3D &amp; Blender Tools / Addons</option>
-                  <option value="web">Web Platform &amp; Apps</option>
-                  <option value="custom">Custom Systems Architecture</option>
+                <select id="contact-service" name="service" class="form-select">
+                  <option value="Web Platform & Apps">Web Platform &amp; Apps</option>
+                  <option value="Custom Systems Architecture">Custom Systems Architecture</option>
+                  <option value="Game Development (Godot / Unity / 3D)">Game Development (Godot / Unity / 3D)</option>
+                  <option value="3D & Blender Tools / Addons">3D &amp; Blender Tools / Addons</option>
                 </select>
               </div>
 
@@ -172,11 +161,11 @@
                 <label for="contact-timeline" class="mono text-xs font-bold uppercase text-white block mb-2">
                   Target Timeline
                 </label>
-                <select id="contact-timeline" class="form-select">
-                  <option value="asap">Immediate (Within 2-4 weeks)</option>
-                  <option value="1-3-months">1 to 3 Months</option>
-                  <option value="quarterly">Quarterly Sprint Roadmap</option>
-                  <option value="exploratory">Exploratory / Initial Scoping</option>
+                <select id="contact-timeline" name="timeline" class="form-select">
+                  <option value="Immediate (Within 2-4 weeks)">Immediate (Within 2-4 weeks)</option>
+                  <option value="1 to 3 Months">1 to 3 Months</option>
+                  <option value="Quarterly Sprint Roadmap">Quarterly Sprint Roadmap</option>
+                  <option value="Exploratory / Initial Scoping">Exploratory / Initial Scoping</option>
                 </select>
               </div>
             </div>
@@ -185,7 +174,7 @@
               <label for="contact-brief" class="mono text-xs font-bold uppercase text-white block mb-2">
                 Project Overview &amp; Requirements *
               </label>
-              <textarea id="contact-brief" rows="5" required placeholder="Tell us about what you want to build, key mechanics or technical challenges..." class="form-textarea"></textarea>
+              <textarea id="contact-brief" name="message" rows="5" required placeholder="Tell us about what you want to build, key mechanics or technical challenges..." class="form-textarea"></textarea>
             </div>
 
             <button type="submit" class="btn-primary w-full py-4 text-sm uppercase tracking-wider flex items-center justify-center gap-2">
@@ -253,7 +242,7 @@
         <a href="showcase.html" class="text-zinc-400 hover:text-white transition-colors">SHOWCASE</a>
         <a href="about.html" class="text-zinc-400 hover:text-white transition-colors">ABOUT</a>
         <a href="contact.html" class="text-zinc-400 hover:text-white transition-colors">CONNECT</a>
-        <a href="mailto:hello@byteweev.com" class="text-zinc-400 hover:text-white transition-colors">HELLO@BYTEWEEV.COM</a>
+        <a href="mailto:byteweev@gmail.com" class="text-zinc-400 hover:text-white transition-colors">BYTEWEEV@GMAIL.COM</a>
       </div>
 
     </div>

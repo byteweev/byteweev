@@ -19,7 +19,7 @@ window.BYTEWEEV_DATA = {
     status: "Available for new client projects",
     sprintPace: "14-Day Sprint Ship Cadence",
     codeOwnership: "100% Client IP Ownership",
-    email: "hello@byteweev.com",
+    email: "byteweev@gmail.com",
     github: "https://github.com/byteweev",
     linkedin: "https://linkedin.com",
     x: "https://x.com",

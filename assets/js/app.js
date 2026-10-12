@@ -730,13 +730,13 @@ function initFaqAccordion() {
 }
 
 /* ==========================================================================
-   10. Contact Form Submission Handling
+   10. Contact Form Submission Handling (Formspree AJAX)
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-inquiry-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = document.getElementById('contact-name')?.value.trim();
@@ -753,26 +753,63 @@ function initContactForm() {
       return;
     }
 
+    // Set loading state
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.innerHTML = `<span>TRANSMITTING...</span>`;
+      submitBtn.innerHTML = `<span>TRANSMITTING INQUIRY...</span>`;
     }
 
     if (feedback) {
-      feedback.textContent = 'Encrypting & sending inquiry to ByteWeev engineers...';
+      feedback.textContent = 'Transmitting inquiry to ByteWeev...';
       feedback.className = 'mono text-xs text-[#71717a] mt-4';
     }
 
-    setTimeout(() => {
-      form.reset();
+    try {
+      const endpoint = form.getAttribute('action') || 'https://formspree.io/f/mnpjbgov';
+      const formData = new FormData(form);
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<span>INQUIRY TRANSMITTED</span> <span>✓</span>`;
+        }
+        if (feedback) {
+          feedback.textContent = '✓ Inquiry received! We will review your brief and reply within 24 hours at ' + email;
+          feedback.className = 'mono text-xs text-emerald-400 font-bold mt-4';
+        }
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        let errorMsg = 'Oops! There was an issue submitting your inquiry. Please email us directly at byteweev@gmail.com.';
+        if (errorData && errorData.errors && errorData.errors.length) {
+          errorMsg = errorData.errors.map(err => err.message).join(', ');
+        }
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `<span>RETRY TRANSMISSION</span> <span>&rarr;</span>`;
+        }
+        if (feedback) {
+          feedback.textContent = errorMsg;
+          feedback.className = 'mono text-xs text-rose-500 font-bold mt-4';
+        }
+      }
+    } catch (err) {
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = `<span>INQUIRY TRANSMITTED</span> <span>✓</span>`;
+        submitBtn.innerHTML = `<span>RETRY TRANSMISSION</span> <span>&rarr;</span>`;
       }
       if (feedback) {
-        feedback.textContent = 'Inquiry received. A senior engineer will review your brief and reply within 24 hours.';
-        feedback.className = 'mono text-xs text-emerald-400 font-bold mt-4';
+        feedback.textContent = 'Connection error. Please reach out directly to byteweev@gmail.com.';
+        feedback.className = 'mono text-xs text-rose-500 font-bold mt-4';
       }
-    }, 800);
+    }
   });
 }
